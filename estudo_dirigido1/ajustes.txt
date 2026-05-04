@@ -1,0 +1,22 @@
+0 - No meu "Edit", faça:
+"Clear Outputs of all Cells"
+
+1 - Na definição das notas use:
+notas = pd.Series([2,7,5,8,10])
+(atualize as notas também na célula em que os índices são adicionados)
+
+2 - Na criação do DataFrame use:
+df = pd.DataFrame({'Aluno' : ["Wilfred", "Abbie", "Harry", "Julia", "Carrie"],
+                   'Faltas' : [3,1,2,4,5],
+                   'Prova' : [2,7,5,8,10],
+                   'Seminário': [6.5,7.8,8.0,9.5,5.0]})
+
+3 - Nas condições múltiplas use:
+df[(df["Seminário"] > 6.0) & (df["Prova"] > 3)]
+
+4 - No preenchimento dos valores NaN use:
+df2.fillna(0)
+
+5 - Na plotagem do histograma de preços use 100 bins
+
+6 - Na troca de estilo de gráfico use 'bmh'
