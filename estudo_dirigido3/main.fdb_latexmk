@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1779074260.16404 "/home/lucsol1/Documentos/estudos/PGCC009/estudo_dirigido3/main.tex" "main.pdf" "main" 1779074260.44447 0
-  "/home/lucsol1/Documentos/estudos/PGCC009/estudo_dirigido3/main.tex" 1779074259.99477 4256 7135db7f72975020ddfa4c75242d8451 ""
+["pdflatex"] 1779139044.75942 "/home/lucsol1/Documentos/estudos/PGCC009/estudo_dirigido3/main.tex" "main.pdf" "main" 1779139045.09774 0
+  "/home/lucsol1/Documentos/estudos/PGCC009/estudo_dirigido3/main.tex" 1779139044.57814 6670 e3ad1dcd70e47511ba4acc36e29bade6 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -58,8 +58,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1775001600 40900 887e0dc8cac988a9e9c574af364cf837 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1776388357.40154 4602601 5d02a5c5d52d7237566d144856366042 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1778443571 7753795 f58111c2a4652f2792e346272f0905ab ""
-  "main.aux" 1779074260.41243 190 c8253c9d7769b03a4d36e4e50169a4b9 "pdflatex"
-  "main.tex" 1779074259.99477 4256 7135db7f72975020ddfa4c75242d8451 ""
+  "main.aux" 1779139045.06114 190 6d01f3f22358a129ce2a2083b29e801b "pdflatex"
+  "main.tex" 1779139044.57814 6670 e3ad1dcd70e47511ba4acc36e29bade6 ""
   (generated)
   "main.aux"
   "main.log"

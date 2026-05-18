@@ -57,16 +57,35 @@ principais argumentos?}
 
 \section*{Questão 7 - Considerando um classificador do tipo vizinhos mais próximos, como especificar quantos
 vizinhos devem ser considerados no processo de classificação?}
+O parâmetro \texttt{n\_neighbors()} é responsável por especificar quantos vizinhos devem ser considerados no processo de classificação. 
 
 \section*{Questão 8 - Considerando um classificador do tipo vizinhos mais próximos, qual o impacto em se utilizar
 poderação tipo uniforme ou baseada em distância?}
+O padrão do parâmetro de poderação \texttt{weights} é "uniform", o que significa que cada vizinho tem o mesmo peso na classificação. Se for definido como "distance", os vizinhos mais próximos terão um peso maior do que os vizinhos mais distantes, o que pode melhorar a precisão em alguns casos, principalmente quando os dados estão desbalanceados.
+Portanto, é interessante testar ambos os tipos de poderação para verificar qual apresenta melhor desempenho para o conjunto de dados em questão.
 
 \section*{Questão 9 - Considerando o classificar do tipo Naive Bayes, como especificar as probabilidades a priori
 das classes diretamente, ou seja, sem computar a partir dos dados?}
+Podemos especificar as probabilidades a priori das classes diretamente utilizando o parâmetro \texttt{class\_prior()} do classificador Naive Bayes (O GaussianNB usa \texttt{priors()}). 
+Este parâmetro aceita uma lista de probabilidades para cada classe, onde obviamenete a soma das probabilidades deve ser igual a 1. 
+ 
 
-\section*{
+\section*{  
     Questão 10 - Considerndo os datasets “moons”, “circles” e “linearly separable”. Qual classificador apresenta a melhor eficácia para cada um e qual apresenta a pior eficácia? Justifique.
 }
+No dataset “moons”: K-NN, RBF SVM e Gaussian Process foram os melhores classificadores, pois conseguiram capturar a complexidade do formato dos dados, classificadores linerares não conseguiram isso.
+O pior classificador para esse dataset foi o QDA, pois ele assume que as classes seguem uma distribuição normal.
+
+No dataset “circles”: O melhor algoritmo foi o K-NN, pois ele é capaz de capturar a complexidade do formato dos dados, novamente os classificadores lineares não conseguiram isso, sendo que Linear SVM foi o pior classificador.
+
+No dataset “linearly separable”: K-NN, Linear SVM, RBF SVM, Decision Tree, Random Forest, Neural Net, Adaboost e Naive Bayes apresentaram o mesmo desempenho. 
+Os piores desempenhos foram o Linear SVM, Guassian Prcess e QDA, porém, não ficaram muito atrás dos outros classificadores, pois o dataset é linearmente separável, o que favorece o 
+desempenho de classificadores lineares. Entretanto, modelos que conseguem capturar mais a complexidade dos dados ainda apresentaram um melhor desempenho.
+
+
 \section*{Questão 11 - Considerando classificadores do tipo árvore de decisão, o que é chamado de “caminho de
 decisão”?}
+
+Decision Path é o caminho percorrido desde a raiz da árvore até uma folha. Ele mostra quais decisões foram tomadas em cada nó para chegar à classificação/regressão final ou um nó específico. O caminho de decisão é útil para entender como o modelo está tomando suas decisões e para identificar quais características estão sendo usadas para fazer as previsões.
 \end{document}  
+
