@@ -1,0 +1,18 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Bishop 2006]{bishop2006prml}
+\abntrefinfo{Bishop}{BISHOP}{2006}
+{BISHOP, C.~M. \emph{Pattern Recognition and Machine Learning}. [S.l.]: Springer, 2006.
+ISBN 9780387310732.}
+
+\bibitem[{Scikit-learn developers} 2026]{sklearn-doc}
+\abntrefinfo{{Scikit-learn developers}}{{Scikit-learn developers}}{2026}
+{{Scikit-learn developers}. \emph{Scikit-learn Documentation}. 2026. \url{https://scikit-learn.org/stable/documentation.html}.
+Accessed: 2026-05-14.}
+
+\end{thebibliography}
