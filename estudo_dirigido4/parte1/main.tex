@@ -1,0 +1,56 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[alf]{abntex2cite}
+\usepackage[utf8]{inputenc}
+\usepackage[left=1cm, top=0.1cm, bottom=0.1cm, right=1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage[portuguese]{babel}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{titling}
+\setlength{\droptitle}{-3cm}
+\bibliographystyle{abntex2-alf}
+\singlespacing
+
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\small\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+\titlespacing*{\subsection}{0pt}{4pt}{2pt}
+
+\title{\large Estudo Dirigido 3}
+\author{\small Lucas Silva de Oliveira}
+\date{\small\today}
+
+\begin{document}
+\maketitle
+\vspace{-0.99cm}  
+\begin{center}
+\small
+\textbf{Instituição:} UEFS \quad | \quad
+\textbf{Disciplina:} Aprendizado de Máquina e Ciência de Dados \quad | \quad
+\textbf{Professor:} Dr. Rodrigo Tripodi Calumby
+\end{center}
+
+Na sua linguagem de programação e bibliotecas de apoio, investigue quais ferramentas de pré-processamento de dados estão disponíveis. 
+Crie um resumo de componentes de código que permitam executar as tarefas de pré-processamento discutidas em sala: Limpeza, Integração, Redução e Transformação.
+
+Em Python:
+\begin{itemize}
+    \item Pandas: É a biblioteca principal para manipulação de datasets, ela auxilia nas tarefas básicas de pré-processamento como: deletar colunas, imputar valores ausentes, filtrar dados entre outras funcionalidades.
+
+    \item Numpy: Biblioteca que permite operações numéricas de limpeza de dados e é 
+    frequentemente usado ao lado do Pandas para pré-processamento eficiente em 
+    termos de desempenho.
+
+    \item Scikit-learn: fornece um módulo de pré-processamento dedicado que 
+    é muito utilizado em fluxos de trabalho de aprendizado de máquina.
+\end{itemize}
+\bibliography{referencias}
+
+\end{document}  
+
