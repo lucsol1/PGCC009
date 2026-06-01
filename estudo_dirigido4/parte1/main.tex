@@ -1,7 +1,7 @@
 \documentclass[12pt, a4paper]{article}
 \usepackage[alf]{abntex2cite}
 \usepackage[utf8]{inputenc}
-\usepackage[left=1cm, top=0.1cm, bottom=0.1cm, right=1cm]{geometry}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{enumitem}
@@ -13,6 +13,7 @@
 \usepackage{caption}
 \usepackage{titlesec}
 \usepackage{titling}
+\usepackage{listings}
 \setlength{\droptitle}{-3cm}
 \bibliographystyle{abntex2-alf}
 \singlespacing
@@ -49,7 +50,84 @@ Em Python:
 
     \item Scikit-learn: fornece um módulo de pré-processamento dedicado que 
     é muito utilizado em fluxos de trabalho de aprendizado de máquina.
-\end{itemize}
+
+    \begin{lstlisting}[language=Python, title = {Exemplo de funções e métodos em Python}]
+        import pandas as pd
+        import numpy as np
+        from sklearn.decomposition import PCA
+        from sklearn.preprocessing import MinMaxScaler
+        from sklearn.preprocessing import StandardScaler
+        from sklearn.preprocessing import LabelEncoder
+        from sklearn.preprocessing import OneHotEncoder
+
+        df1 = pd.read_csv("exemplo1.csv")
+
+        #-------------- LIMPEZA DE DADOS ------------
+        #remove elementos ausentes
+        df1.dropna()
+
+        #preenche elementos ausentes
+        df1.fillna(0)
+
+        #remove linhas duplicadas no dataset
+        df1.drop_duplicates()
+   
+        df1.replace("N/A", np.nan)
+
+        #-------------- INTEGRACAO DE DADOS ----------
+        df2 = pd.read_csv("exemplo2.csv")
+
+        pd.merge(df1, df2, on="id")
+
+        
+        pd.concat([df1, df2])
+
+        resultado_join = df1.join(df2)
+
+        #-------------- REDUCAO DE DADOS --------------
+
+        df1 = df1[['idade', 'salario', 'comprou']]
+
+        pca = PCA(n_components=2)
+        X_reduzido = pca.fit_transform(X)
+
+        #-------------- TRANSFORMACAO DE DADOS --------------
+        scaler = MinMaxScaler()
+        X_norm = scaler.fit_transform(X)
+
+        scaler = StandardScaler()
+        X_pad = scaler.fit_transform(X)
+
+        encoder = LabelEncoder()
+        df1['cidade'] = encoder.fit_transform(df1['cidade'])
+
+        hot_encoder = OneHotEncoder()
+        cidade_codificada = hot_encoder.fit_transform(df1[['cidade']])
+
+    \end{lstlisting}
+    \end{itemize}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{ll}
+        \toprule
+        Etapa & Componentes Utilizados \\
+        \midrule
+        Limpeza &
+        dropna(), fillna(), drop\_duplicates(), replace() \\
+
+        Integração &
+        merge(), concat(), join() \\
+
+        Redução &
+        Seleção de atributos, PCA \\
+
+        Transformação &
+        MinMaxScaler, StandardScaler, LabelEncoder,
+        OneHotEncoder \\
+        \bottomrule
+        \end{tabular}
+        \caption{Ferramentas de pré-processamento em Python}
+    \end{table}
 \bibliography{referencias}
 
 \end{document}  
