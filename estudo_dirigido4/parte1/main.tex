@@ -37,9 +37,6 @@
 \textbf{Professor:} Dr. Rodrigo Tripodi Calumby
 \end{center}
 
-Na sua linguagem de programação e bibliotecas de apoio, investigue quais ferramentas de pré-processamento de dados estão disponíveis. 
-Crie um resumo de componentes de código que permitam executar as tarefas de pré-processamento discutidas em sala: Limpeza, Integração, Redução e Transformação.
-
 Em Python:
 \begin{itemize}
     \item Pandas: É a biblioteca principal para manipulação de datasets, ela auxilia nas tarefas básicas de pré-processamento como: deletar colunas, imputar valores ausentes, filtrar dados entre outras funcionalidades.
@@ -59,6 +56,7 @@ Em Python:
         from sklearn.preprocessing import StandardScaler
         from sklearn.preprocessing import LabelEncoder
         from sklearn.preprocessing import OneHotEncoder
+        from sklearn.impute import SimpleImputer
 
         df1 = pd.read_csv("exemplo1.csv")
 
@@ -69,11 +67,12 @@ Em Python:
         #preenche elementos ausentes
         df1.fillna(0)
 
+        imputer = SimpleImputer(strategy='mean')
+        df1[['idade']] = imputer.fit_transform(df1[['idade']])
+
         #remove linhas duplicadas no dataset
         df1.drop_duplicates()
    
-        df1.replace("N/A", np.nan)
-
         #-------------- INTEGRACAO DE DADOS ----------
         df2 = pd.read_csv("exemplo2.csv")
 
@@ -106,6 +105,10 @@ Em Python:
 
     \end{lstlisting}
     \end{itemize}
+
+    Na Tabela \ref{tab:preprocessamento} é possível visualizar algumas das principais funções,
+    métodos e classes que podem auxiliar nas diferentes etapas do
+    pré-processamento de dados em Python.
     \begin{table}[h]
         \centering
         \begin{tabular}{ll}
@@ -113,7 +116,8 @@ Em Python:
         Etapa & Componentes Utilizados \\
         \midrule
         Limpeza &
-        dropna(), fillna(), drop\_duplicates(), replace() \\
+        dropna(), fillna(), SimpleImputer, \\
+        & drop\_duplicates(), replace() \\
 
         Integração &
         merge(), concat(), join() \\
@@ -122,12 +126,15 @@ Em Python:
         Seleção de atributos, PCA \\
 
         Transformação &
-        MinMaxScaler, StandardScaler, LabelEncoder,
-        OneHotEncoder \\
+        MinMaxScaler, StandardScaler, \\
+        & LabelEncoder, OneHotEncoder \\
         \bottomrule
         \end{tabular}
-        \caption{Ferramentas de pré-processamento em Python}
+        \caption{Principais funções, métodos e classes para pré-processamento de dados em Python}
+        \label{tab:preprocessamento}
     \end{table}
+
+\nocite{datacamp_preprocessing,pandas_docs, sklearn-doc}
 \bibliography{referencias}
 
 \end{document}  
